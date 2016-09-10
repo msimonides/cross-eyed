@@ -4,9 +4,6 @@
     "keywords": [],
     "name": "cross-eyed",
     "pebble": {
-        "capabilities": [
-            ""
-        ],
         "displayName": "Cross-Eyed",
         "enableMultiJS": true,
         "messageKeys": [],
@@ -18,7 +15,8 @@
         "targetPlatforms": [
             "aplite",
             "basalt",
-            "chalk"
+            "chalk",
+            "diorite"
         ],
         "uuid": "10db05be-fa37-4e8d-90f8-7f2a3077852a",
         "watchapp": {

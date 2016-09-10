@@ -129,9 +129,6 @@ static void update_proc(Layer* layer, GContext* ctx) {
   draw_eye(ctx, GPoint(left_eye_center_x, eye_center_y), eye_size, hour12_minutes * TRIG_MAX_ANGLE / (12 * 60));
   draw_eye(ctx, GPoint(right_eye_center_x, eye_center_y), eye_size, minutes * TRIG_MAX_ANGLE / 60);
   
-  if (minutes % MOUTH_CHANGE_MODULO_MINUTES == 0)
-    choose_random_mouth(layer);
-  
   GPoint mouth_center = GPoint(bounds.size.w / 2, bounds.size.h * 0.75f);
   draw_mouth(ctx, data->mouth_index, mouth_center, bounds.size.w / PBL_IF_RECT_ELSE(2, 2.5f));
 }
@@ -146,5 +143,9 @@ Layer* timeface_layer_create(GRect frame) {
 void timeface_layer_set_time(Layer* layer, struct tm *tick_time) {
   LayerData* data = (LayerData*) layer_get_data(layer);
   data->current_time = *tick_time;
+
+  if (data->current_time.tm_min % MOUTH_CHANGE_MODULO_MINUTES == 0)
+    choose_random_mouth(layer);
+  
   layer_mark_dirty(layer);
 }
