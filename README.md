@@ -6,7 +6,7 @@ I was playing with the Pebble SDK the other day and this is the result:
 
 The left eye shows the hour, the right one - the minutes. The mouth is open to interpretation.
 
-[Get it here](https://apps.getpebble.com/en_US/application/57aa31febb85ed5f9b00002b) and have fun.
+[Get it here](https://apps.rebble.io/pl_PL/application/57aa31febb85ed5f9b00002b) and have fun.
 
 ## Contact
 
